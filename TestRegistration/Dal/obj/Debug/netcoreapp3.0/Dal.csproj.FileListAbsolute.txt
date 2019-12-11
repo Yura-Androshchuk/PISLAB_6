@@ -1,0 +1,8 @@
+F:\REG\TestRegistration\Dal\bin\Debug\netcoreapp3.0\Dal.deps.json
+F:\REG\TestRegistration\Dal\bin\Debug\netcoreapp3.0\Dal.dll
+F:\REG\TestRegistration\Dal\obj\Debug\netcoreapp3.0\Dal.csprojAssemblyReference.cache
+F:\REG\TestRegistration\Dal\obj\Debug\netcoreapp3.0\Dal.AssemblyInfoInputs.cache
+F:\REG\TestRegistration\Dal\obj\Debug\netcoreapp3.0\Dal.AssemblyInfo.cs
+F:\REG\TestRegistration\Dal\bin\Debug\netcoreapp3.0\Dal.pdb
+F:\REG\TestRegistration\Dal\obj\Debug\netcoreapp3.0\Dal.dll
+F:\REG\TestRegistration\Dal\obj\Debug\netcoreapp3.0\Dal.pdb
