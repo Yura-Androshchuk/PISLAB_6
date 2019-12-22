@@ -1,0 +1,11 @@
+F:\REG\TestRegistration\BusinessLogic\bin\Debug\netcoreapp3.0\BusinessLogic.deps.json
+F:\REG\TestRegistration\BusinessLogic\bin\Debug\netcoreapp3.0\BusinessLogic.dll
+F:\REG\TestRegistration\BusinessLogic\bin\Debug\netcoreapp3.0\BusinessLogic.pdb
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.csprojAssemblyReference.cache
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.AssemblyInfoInputs.cache
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.AssemblyInfo.cs
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.dll
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.pdb
+F:\REG\TestRegistration\BusinessLogic\bin\Debug\netcoreapp3.0\Dal.dll
+F:\REG\TestRegistration\BusinessLogic\bin\Debug\netcoreapp3.0\Dal.pdb
+F:\REG\TestRegistration\BusinessLogic\obj\Debug\netcoreapp3.0\BusinessLogic.csproj.CopyComplete

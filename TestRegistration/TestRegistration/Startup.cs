@@ -16,6 +16,9 @@ using TestRegistration.Models;
 using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using TestRegistration.Extensions;
+using Dal.Models;
+using BusinessLogic.Interfaces;
+using BusinessLogic.Servicies;
 
 namespace TestRegistration
 {
@@ -33,13 +36,22 @@ namespace TestRegistration
         {
 
             //Inject AppSettings
+            services.AddScoped<IDishService, DishService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IIngredientService, IngredientService>();
             services.Configure<ApplicationSettings>(Configuration.GetSection("ApplicationSettings"));
             services.ConfigureRepositoryWrapper();
             services.AddMvc();
             services.ConfigureLoggerService();
             services.AddControllers();
 
+            services.ConfigureAutoMapper();
+            services.ConfigureUnitOfWork(Configuration);
+            //services.ConfigureBLLServices();
+
             services.AddDbContext<AuthenticationContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<RestaurantContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>(options =>

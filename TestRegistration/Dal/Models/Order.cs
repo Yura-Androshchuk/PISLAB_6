@@ -8,6 +8,7 @@ namespace Dal.Models
      public class Order
     {
         public Guid OrderId { get; set; }
+        public double Sum { get; set; }
 
     }
 }

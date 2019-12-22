@@ -17,6 +17,10 @@ namespace Dal.Repositories
         {
             _restaurantContext = restaurantContext;
         }
+        public RepositoryWrapper(string connection)
+        {
+            this._restaurantContext = new RestaurantContext(connection);
+        }
         public void Save()
         {
             _restaurantContext.SaveChanges();

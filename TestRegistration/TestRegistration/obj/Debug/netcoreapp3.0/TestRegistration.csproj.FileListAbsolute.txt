@@ -119,3 +119,8 @@ F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\NLog.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\NLog.Extensions.Logging.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Dal.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Dal.pdb
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\AutoMapper.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\BusinessLogic.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\BusinessLogic.pdb
+F:\REG\TestRegistration\TestRegistration\obj\Debug\netcoreapp3.0\TestRegistration.MvcApplicationPartsAssemblyInfo.cache
