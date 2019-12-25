@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLogic.BlDto;
 using BusinessLogic.Interfaces;
+using Dal.Interfaces;
 using Dal.Repositories;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,8 @@ namespace BusinessLogic.Servicies
     public class IngredientService:IIngredientService
     {
         private IMapper mapper;
-        private RepositoryWrapper wrapper;
-        public IngredientService(IMapper mapper, RepositoryWrapper wrapper)
+        private IRepositoryWrapper wrapper;
+        public IngredientService(IMapper mapper, IRepositoryWrapper wrapper)
         {
             this.mapper = mapper;
             this.wrapper = wrapper;

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestRegistration</name>
+    </assembly>
+    <members>
+        <member name="M:TestRegistration.Controllers.ApplicationUserController.PostApplicationUser(TestRegistration.Models.ApplicationUserModel)">
+            <summary>
+            Creates a User.
+            </summary>
+            <returns>A newly created user</returns> 
+        </member>
+        <member name="M:TestRegistration.Controllers.ApplicationUserController.Login(TestRegistration.Models.LoginModel)">
+            <summary>
+            Creates a Token.
+            </summary>
+            <returns>A newly created Token</returns> 
+        </member>
+        <member name="M:TestRegistration.Controllers.DishController.GetDishes">
+            <summary>
+            Gets the list of all Dishes.
+            </summary>
+            <returns>The list of Dishes.</returns>
+        </member>
+        <member name="M:TestRegistration.Controllers.DishController.PutDish(System.Guid,TestRegistration.DtosPL.DishPlDto)">
+            <summary>
+            Update a dish.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Dish successfully updated</response>
+            <response code="400">If the item is null</response>
+             <response code="500">Server Error</response> 
+        </member>
+        <member name="M:TestRegistration.Controllers.DishController.PostDish(TestRegistration.DtosPL.DishPlDto)">
+            <summary>
+            Creates a Dish.
+            </summary>
+            <returns>A newly created dish</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response>     
+        </member>
+        <member name="M:TestRegistration.Controllers.DishController.DeleteDish(System.Guid,TestRegistration.DtosPL.DishPlDto)">
+            <summary>
+            Delete a dish.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Dish successfully deleted</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response>   
+        </member>
+        <member name="M:TestRegistration.Controllers.IngredientController.GetIngredients">
+            <summary>
+            Gets the list of all Ingredients.
+            </summary>
+            <returns>The list of Ingredients.</returns>
+        </member>
+        <member name="M:TestRegistration.Controllers.IngredientController.PutIngredient(System.Guid,TestRegistration.DtosPL.IngredientPlDto)">
+            <summary>
+            Update an Ingredient.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Ingredient successfully updated</response>
+            <response code="400">If the item is null</response>
+            <response code="500">Server Error</response> 
+        </member>
+        <member name="M:TestRegistration.Controllers.IngredientController.PostIngredient(TestRegistration.DtosPL.IngredientPlDto)">
+            <summary>
+            Creates an Ingredient.
+            </summary>
+            <returns>A newly created ingredient</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>
+             <response code="500">Server Error</response>
+        </member>
+        <member name="M:TestRegistration.Controllers.IngredientController.DeleteIngredient(System.Guid,TestRegistration.DtosPL.IngredientPlDto)">
+            <summary>
+            Delete an Ingredient.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Ingredient successfully deleted</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response> 
+        </member>
+        <member name="M:TestRegistration.Controllers.OrderController.GetOrders">
+            <summary>
+            Gets the list of all Orders.
+            </summary>
+            <returns>The list of orders.</returns>
+        </member>
+        <member name="M:TestRegistration.Controllers.OrderController.PutOrder(System.Guid,TestRegistration.DtosPL.OrderPlDto)">
+            <summary>
+            Update a Order.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Order successfully updated</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response> 
+        </member>
+        <member name="M:TestRegistration.Controllers.OrderController.PostOrder(TestRegistration.DtosPL.OrderPlDto)">
+            <summary>
+            Creates an Order.
+            </summary>
+            <returns>A newly created order</returns>
+            <response code="201">Returns the newly created item</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response> 
+        </member>
+        <member name="M:TestRegistration.Controllers.OrderController.DeleteOrder(System.Guid,TestRegistration.DtosPL.OrderPlDto)">
+            <summary>
+            Delete an order.
+            </summary>
+            <returns>Status code</returns>
+            <response code="204">Order successfully deleted</response>
+            <response code="400">If the item is null</response>
+            /// <response code="500">Server Error</response>  
+        </member>
+        <member name="M:TestRegistration.Controllers.UserProfileController.GetUserProfile">
+            <summary>
+            Gets User ptofile.
+            </summary>
+            <returns>The user.</returns>
+        </member>
+    </members>
+</doc>

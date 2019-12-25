@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Dal.Migrations
 {
     [DbContext(typeof(RestaurantContext))]
-    [Migration("20191221190041_RestaurantInitialize")]
-    partial class RestaurantInitialize
+    [Migration("20191222205303_InitialRestauran1t")]
+    partial class InitialRestauran1t
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,15 +32,13 @@ namespace Dal.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.HasKey("DishId");
+                    b.Property<double>("TimeInSec")
+                        .HasColumnType("float");
 
-                    b.HasIndex("OrderID");
+                    b.HasKey("DishId");
 
                     b.ToTable("Dishes");
                 });
@@ -78,15 +76,6 @@ namespace Dal.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Dal.Models.Dish", b =>
-                {
-                    b.HasOne("Dal.Models.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Dal.Models.Ingredient", b =>

@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BusinessLogic.BlDto;
 using BusinessLogic.Interfaces;
+using Dal.Interfaces;
 using Dal.Repositories;
 using System;
 using System.Collections.Generic;
@@ -12,9 +13,9 @@ namespace BusinessLogic.Servicies
     public class OrderService : IOrderService
     {
         private IMapper mapper;
-        private RepositoryWrapper wrapper;
+        private IRepositoryWrapper wrapper;
 
-        public OrderService(IMapper mapper, RepositoryWrapper wrapper)
+        public OrderService(IMapper mapper, IRepositoryWrapper wrapper)
         {
             this.mapper = mapper;
             this.wrapper = wrapper;

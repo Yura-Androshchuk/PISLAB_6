@@ -123,4 +123,15 @@ F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\AutoMapper.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\BusinessLogic.dll
 F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\BusinessLogic.pdb
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.JsonPatch.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Microsoft.DotNet.PlatformAbstractions.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Microsoft.Extensions.DependencyModel.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Microsoft.OpenApi.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Newtonsoft.Json.Bson.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\REG\TestRegistration\TestRegistration\obj\Debug\netcoreapp3.0\TestRegistration.MvcApplicationPartsAssemblyInfo.cs
 F:\REG\TestRegistration\TestRegistration\obj\Debug\netcoreapp3.0\TestRegistration.MvcApplicationPartsAssemblyInfo.cache
+F:\REG\TestRegistration\TestRegistration\bin\Debug\netcoreapp3.0\TestRegistration.xml

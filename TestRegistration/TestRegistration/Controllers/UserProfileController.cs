@@ -20,7 +20,10 @@ namespace TestRegistration.Controllers
         {
             _userManager = userManager;
         }
-
+        /// <summary>
+        /// Gets User ptofile.
+        /// </summary>
+        /// <returns>The user.</returns>
         [HttpGet]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         //GET : /api/UserProfile

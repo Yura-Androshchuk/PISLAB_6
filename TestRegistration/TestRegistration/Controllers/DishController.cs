@@ -29,7 +29,11 @@ namespace TestRegistration.Controllers
             this.dishService = dishService;
         }
 
-        // GET: api/DishesControllerTest
+        /// <summary>
+        /// Gets the list of all Dishes.
+        /// </summary>
+        /// <returns>The list of Dishes.</returns>
+        // GET: api/DishesController
         [HttpGet]
         public IActionResult GetDishes()
         {
@@ -58,10 +62,17 @@ namespace TestRegistration.Controllers
         //    return dish;
         //}
 
-        // PUT: api/DishesControllerTest/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Update a dish.
+        /// </summary>
+        /// <returns>Status code</returns>
+        /// <response code="204">Dish successfully updated</response>
+        /// <response code="400">If the item is null</response>
+        ///  <response code="500">Server Error</response> 
         [HttpPut("{id}")]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         public IActionResult PutDish(Guid id, [FromBody] DishPlDto dish)
         {
             if (id != dish.DishId)
@@ -78,18 +89,26 @@ namespace TestRegistration.Controllers
                 dish.DishId = id;
                 var newdish = mapper.Map<BlDto_Dish>(dish);
                 dishService.UpdateDish(newdish);
-                return StatusCode(204, "Author was deleted");
+                return StatusCode(204, "Dish was updated");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error. Author is not deleted. Exception message: " + ex);
+                return StatusCode(500, "Internal server error. Dish is not deleted. Exception message: " + ex);
             }
         }
 
-        // POST: api/DishesControllerTest
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
+        /// <summary>
+        /// Creates a Dish.
+        /// </summary>
+        /// <returns>A newly created dish</returns>
+
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>
+        /// /// <response code="500">Server Error</response>     
         [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         public IActionResult PostDish([FromBody] DishPlDto dish)
         {
             if (!ModelState.IsValid)
@@ -103,20 +122,30 @@ namespace TestRegistration.Controllers
                 var newDish = mapper.Map<BlDto_Dish>(dish);
                 dishService.AddDish(newDish);
 
-                return StatusCode(201, "Author was added");
+                return StatusCode(201, "Dish was added");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error. Author is not added. Exception message: " + ex);
+                return StatusCode(500, "Internal server error. Dish is not added. Exception message: " + ex);
             }
 
 
 
             //  return CreatedAtAction("GetDish", new { id = dish.DishId }, dish);
         }
+        /// <summary>
+        /// Delete a dish.
+        /// </summary>
+        /// <returns>Status code</returns>
 
-        // DELETE: api/DishesControllerTest/5
+        /// <response code="204">Dish successfully deleted</response>
+        /// <response code="400">If the item is null</response>
+        /// /// <response code="500">Server Error</response>   
+        
         [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         public IActionResult DeleteDish(Guid id, [FromBody] DishPlDto dish)
         {
             if (!ModelState.IsValid)
@@ -129,11 +158,11 @@ namespace TestRegistration.Controllers
                 dish.DishId = id;
                 var newDish = mapper.Map<BlDto_Dish>(dish);
                 dishService.DeleteDish(newDish);
-                return StatusCode(204, "Author was deleted");
+                return StatusCode(204, "Dish was deleted");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "Internal server error. Author is not deleted. Exception message: " + ex);
+                return StatusCode(500, "Internal server error. Dish is not deleted. Exception message: " + ex);
             }
         }
 

@@ -28,7 +28,10 @@ namespace TestRegistration.Controllers
             _singInManager = signInManager;
             _appSettings = appSettings.Value;
         }
-
+        /// <summary>
+        /// Creates a User.
+        /// </summary>
+        /// <returns>A newly created user</returns> 
         [HttpPost]
         [Route("Register")]
         //POST : /api/ApplicationUser/Register
@@ -52,7 +55,10 @@ namespace TestRegistration.Controllers
                 throw ex;
             }
         }
-
+        /// <summary>
+        /// Creates a Token.
+        /// </summary>
+        /// <returns>A newly created Token</returns> 
         [HttpPost]
         [Route("Login")]
         //POST : /api/ApplicationUser/Login

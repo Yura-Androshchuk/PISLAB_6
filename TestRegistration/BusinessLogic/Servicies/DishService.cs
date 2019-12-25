@@ -13,8 +13,8 @@ namespace BusinessLogic.Servicies
     public class DishService: IDishService
     {
         private IMapper mapper;
-        private RepositoryWrapper wrapper;
-        public DishService(IMapper mapper, RepositoryWrapper wrapper)
+        private IRepositoryWrapper wrapper;
+        public DishService(IMapper mapper, IRepositoryWrapper wrapper)
         {
             this.mapper = mapper;
             this.wrapper = wrapper;

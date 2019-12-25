@@ -12,26 +12,28 @@ using TestRegistration.DtosPL;
 
 namespace TestRegistration.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/ingredient")]
     [ApiController]
-    public class IngredientController : ControllerBase
-    {
-        public class DishController : ControllerBase
+   
+        public class IngredientController : ControllerBase
         {
             private IMapper mapper;
             private ILoggerManager _logger;
             private IIngredientService ingredientService;
 
-            public DishController(ILoggerManager logger, IIngredientService ingredientService, IMapper mapper)
+            public IngredientController(ILoggerManager logger, IIngredientService ingredientService, IMapper mapper)
             {
                 _logger = logger;
                 //_repository = repository;
                 this.mapper = mapper;
                 this.ingredientService = ingredientService;
             }
-
-            // GET: api/DishesControllerTest
-            [HttpGet]
+        /// <summary>
+        /// Gets the list of all Ingredients.
+        /// </summary>
+        /// <returns>The list of Ingredients.</returns>
+        // GET: api/IngredientController
+        [HttpGet]
             public IActionResult GetIngredients()
             {
                 var ingredients = ingredientService.GetAllIngredients();
@@ -45,25 +47,18 @@ namespace TestRegistration.Controllers
                 }
             }
 
-            // GET: api/DishesControllerTest/5
-            //[HttpGet("{id}")]
-            //public async Task<ActionResult<Dish>> GetDish(Guid id)
-            //{
-            //    var dish = await _context.Dishes.FindAsync(id);
-
-            //    if (dish == null)
-            //    {
-            //        return NotFound();
-            //    }
-
-            //    return dish;
-            //}
-
-            // PUT: api/DishesControllerTest/5
-            // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-            // more details see https://aka.ms/RazorPagesCRUD.
-            [HttpPut("{id}")]
-            public IActionResult PutIngredient(Guid id, [FromBody] IngredientPlDto ingredient)
+        /// <summary>
+        /// Update an Ingredient.
+        /// </summary>
+        /// <returns>Status code</returns>
+        /// <response code="204">Ingredient successfully updated</response>
+        /// <response code="400">If the item is null</response>
+        /// <response code="500">Server Error</response> 
+        [HttpPut("{id}")]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public IActionResult PutIngredient(Guid id, [FromBody] IngredientPlDto ingredient)
             {
                 if (id != ingredient.IngredientId)
                 {
@@ -87,11 +82,19 @@ namespace TestRegistration.Controllers
                 }
             }
 
-            // POST: api/DishesControllerTest
-            // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-            // more details see https://aka.ms/RazorPagesCRUD.
-            [HttpPost]
-            public IActionResult PostDish([FromBody] IngredientPlDto ingredient)
+        /// <summary>
+        /// Creates an Ingredient.
+        /// </summary>
+        /// <returns>A newly created ingredient</returns>
+
+        /// <response code="201">Returns the newly created item</response>
+        /// <response code="400">If the item is null</response>
+        ///  <response code="500">Server Error</response>
+        [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public IActionResult PostIngredient([FromBody] IngredientPlDto ingredient)
             {
                 if (!ModelState.IsValid)
                 {
@@ -113,12 +116,22 @@ namespace TestRegistration.Controllers
 
 
 
-                //  return CreatedAtAction("GetDish", new { id = dish.DishId }, dish);
+                
             }
+        /// <summary>
+        /// Delete an Ingredient.
+        /// </summary>
+        /// <returns>Status code</returns>
 
-            // DELETE: api/DishesControllerTest/5
-            [HttpDelete("{id}")]
-            public IActionResult DeleteDish(Guid id, [FromBody] IngredientPlDto ingredient)
+        /// <response code="204">Ingredient successfully deleted</response>
+        /// <response code="400">If the item is null</response>
+        /// /// <response code="500">Server Error</response> 
+
+        [HttpDelete("{id}")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        public IActionResult DeleteIngredient(Guid id, [FromBody] IngredientPlDto ingredient)
             {
                 if (!ModelState.IsValid)
                 {
@@ -139,5 +152,5 @@ namespace TestRegistration.Controllers
             }
 
         }
-    }
+    
 }

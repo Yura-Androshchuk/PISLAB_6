@@ -30,15 +30,13 @@ namespace Dal.Migrations
                         .HasColumnType("nvarchar(30)")
                         .HasMaxLength(30);
 
-                    b.Property<Guid>("OrderID")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<double>("Price")
                         .HasColumnType("float");
 
-                    b.HasKey("DishId");
+                    b.Property<double>("TimeInSec")
+                        .HasColumnType("float");
 
-                    b.HasIndex("OrderID");
+                    b.HasKey("DishId");
 
                     b.ToTable("Dishes");
                 });
@@ -76,15 +74,6 @@ namespace Dal.Migrations
                     b.HasKey("OrderId");
 
                     b.ToTable("Orders");
-                });
-
-            modelBuilder.Entity("Dal.Models.Dish", b =>
-                {
-                    b.HasOne("Dal.Models.Order", "Order")
-                        .WithMany()
-                        .HasForeignKey("OrderID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Dal.Models.Ingredient", b =>
