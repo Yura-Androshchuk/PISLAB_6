@@ -8,11 +8,12 @@ namespace TestRegistration.Models
     public class PlDto_Dish
     {
         public Guid DishId { get; set; }
-
+        public int Test1 { get; set; }
         public string Name { get; set; }
 
         public double Price { get; set; }
 
         public Guid OrderID { get; set; }
+        public int Test2 { get; set; }
     }
 }
